@@ -21,4 +21,4 @@ Pasirinktas ilgis saugomas naršyklės `localStorage` raktu `ruler-measurement`.
 
 Įkelk šį projekto aplanką į GitHub repozitoriją. Kolega gali parsisiųsti repozitoriją, atsidaryti terminalą jos aplanke ir paleisti `npm install`, tada `npm run dev`.
 
-Projektas JavaScript pagrine, be backend paslaugų, Supabase, Zapier, Vercel, TypeScript ar papildomų UI bibliotekų. Darbo eiga nenaudoja Issues, papildomų šakų ar pull request.
+Projektas JavaScript pagrindu, be backend paslaugų, Supabase, Zapier, Vercel, TypeScript ar papildomų UI bibliotekų. Darbo eiga nenaudoja Issues, papildomų šakų ar pull request.
