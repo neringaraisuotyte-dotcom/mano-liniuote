@@ -54,6 +54,12 @@ function App() {
           <strong>{measurement === null ? '—' : `${measurement.toFixed(1).replace('.', ',')} cm`}</strong>
         </div>
 
+        <div className="millimeter-result" aria-live="polite">
+          <span>Ilgis milimetrais</span>
+          <strong>{measurement === null ? '— mm' : `${Math.round(measurement * 10)} mm`}</strong>
+          <p>{measurement === null ? 'Pasirink vietą liniuotėje – čia matysi milimetrus.' : '1 centimetras = 10 milimetrų'}</p>
+        </div>
+
         <div className="ruler-scroll" aria-label="Liniuotė nuo 0 iki 20 centimetrų">
           <div className="ruler" onClick={measure} onKeyDown={handleKeyDown} role="slider" tabIndex={0} aria-label="Pasirinkti ilgį centimetrais" aria-valuetext={`${measurement ?? 0} centimetro`} aria-valuemin="0" aria-valuemax="20" aria-valuenow={measurement ?? 0}>
             {Array.from({ length: CENTIMETERS * 10 + 1 }, (_, index) => {

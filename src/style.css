@@ -50,6 +50,19 @@ h1 { margin: 0; font-family: 'Manrope', sans-serif; font-size: clamp(30px, 6vw, 
 }
 .measure-result strong { color: #5147c5; font-family: 'Manrope', sans-serif; font-size: 22px; }
 
+.millimeter-result {
+  margin: 0 auto 24px;
+  padding: 18px;
+  max-width: 380px;
+  border: 2px solid #93d8bc;
+  border-radius: 14px;
+  background: #ecfdf5;
+  color: #176448;
+}
+.millimeter-result > span { display: block; font-size: 14px; font-weight: 600; }
+.millimeter-result strong { display: block; margin-top: 4px; font-family: 'Manrope', sans-serif; font-size: 32px; }
+.millimeter-result p { margin: 8px 0 0; font-size: 13px; line-height: 1.5; }
+
 .ruler-scroll { overflow-x: auto; padding: 12px 0 4px; scrollbar-color: #c5c9d8 #f1f2f6; }
 .ruler {
   position: relative;
