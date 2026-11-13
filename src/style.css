@@ -75,18 +75,19 @@ h1 { margin: 0; font-family: 'Manrope', sans-serif; font-size: clamp(30px, 6vw, 
 .clear-measurement {
   margin-top: 16px;
   padding: 10px 18px;
-  border: 1px solid #dcd9f6;
+  border: 1px solid #4b43b5;
   border-radius: 10px;
-  background: #f5f6ff;
-  color: #5147c5;
+  background: #5147c5;
+  color: #fff;
   font: inherit;
   font-size: 14px;
   font-weight: 600;
   cursor: pointer;
+  transition: background .18s ease, transform .18s ease;
 }
-.clear-measurement:hover:not(:disabled) { background: #eae7ff; }
-.clear-measurement:focus-visible { outline: 3px solid #9991ff; outline-offset: 3px; }
-.clear-measurement:disabled { opacity: .45; cursor: default; }
+.clear-measurement:hover:not(:disabled) { background: #3f369f; transform: translateY(-1px); }
+.clear-measurement:focus-visible { outline: 3px solid #857cff; outline-offset: 3px; }
+.clear-measurement:disabled { border-color: #737b8c; background: #737b8c; color: #fff; opacity: 1; cursor: default; }
 
 @media (max-width: 560px) {
   .ruler-card { padding: 34px 20px 26px; }
