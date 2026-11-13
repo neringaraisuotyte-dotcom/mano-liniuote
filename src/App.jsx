@@ -75,6 +75,9 @@ function App() {
           Išvalyti matavimą
         </button>
       </section>
+      <div className="hamster-runner" aria-hidden="true">
+        <span className="hamster">🐹</span>
+      </div>
     </main>
   )
 }

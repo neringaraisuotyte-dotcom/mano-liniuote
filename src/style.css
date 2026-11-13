@@ -93,3 +93,30 @@ h1 { margin: 0; font-family: 'Manrope', sans-serif; font-size: clamp(30px, 6vw, 
   .ruler-card { padding: 34px 20px 26px; }
   .ruler { margin-left: 0; }
 }
+
+.hamster-runner {
+  position: fixed;
+  z-index: 5;
+  bottom: 10px;
+  left: -60px;
+  pointer-events: none;
+  animation: hamster-cross-screen 14s linear infinite;
+}
+.hamster {
+  display: block;
+  font-size: 42px;
+  filter: drop-shadow(0 3px 2px rgba(38, 50, 71, .15));
+  animation: hamster-bounce .3s ease-in-out infinite alternate;
+}
+@keyframes hamster-cross-screen {
+  from { transform: translateX(0); }
+  to { transform: translateX(calc(100vw + 120px)); }
+}
+@keyframes hamster-bounce {
+  from { transform: translateY(0) rotate(-7deg); }
+  to { transform: translateY(-5px) rotate(7deg); }
+}
+@media (prefers-reduced-motion: reduce) {
+  .hamster-runner { right: 12px; bottom: 8px; left: auto; animation: none; }
+  .hamster { animation: none; }
+}
