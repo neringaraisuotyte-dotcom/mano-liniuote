@@ -37,6 +37,10 @@ function App() {
     }
   }
 
+  function clearMeasurement() {
+    setMeasurement(null)
+  }
+
   return (
     <main className="page-shell">
       <section className="ruler-card" aria-labelledby="page-title">
@@ -67,6 +71,9 @@ function App() {
         </div>
 
         <p className="hint">Kiekvienas mažas brūkšnelis žymi 1 mm.</p>
+        <button className="clear-measurement" type="button" onClick={clearMeasurement} disabled={measurement === null}>
+          Išvalyti matavimą
+        </button>
       </section>
     </main>
   )
