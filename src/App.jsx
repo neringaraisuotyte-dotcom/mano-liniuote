@@ -76,7 +76,20 @@ function App() {
         </button>
       </section>
       <div className="hamster-runner" aria-hidden="true">
-        <span className="hamster">🐹</span>
+        <span className="hamster">
+          <span className="hamster-ear hamster-ear-left" />
+          <span className="hamster-ear hamster-ear-right" />
+          <span className="hamster-body">
+            <span className="hamster-face" />
+            <span className="hamster-eye hamster-eye-left" />
+            <span className="hamster-eye hamster-eye-right" />
+            <span className="hamster-cheek hamster-cheek-left" />
+            <span className="hamster-cheek hamster-cheek-right" />
+            <span className="hamster-nose" />
+          </span>
+          <span className="hamster-paw hamster-paw-left" />
+          <span className="hamster-paw hamster-paw-right" />
+        </span>
       </div>
     </main>
   )

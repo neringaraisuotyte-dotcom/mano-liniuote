@@ -103,10 +103,75 @@ h1 { margin: 0; font-family: 'Manrope', sans-serif; font-size: clamp(30px, 6vw, 
   animation: hamster-cross-screen 14s linear infinite;
 }
 .hamster {
+  position: relative;
   display: block;
-  font-size: 42px;
+  width: 62px;
+  height: 54px;
   filter: drop-shadow(0 3px 2px rgba(38, 50, 71, .15));
   animation: hamster-bounce .3s ease-in-out infinite alternate;
+}
+.hamster-ear {
+  position: absolute;
+  z-index: 0;
+  top: 2px;
+  width: 19px;
+  height: 19px;
+  border: 2px solid #99613e;
+  border-radius: 50%;
+  background: #c98b5a;
+}
+.hamster-ear::after {
+  position: absolute;
+  inset: 4px;
+  border-radius: 50%;
+  background: #e9a9a4;
+  content: '';
+}
+.hamster-ear-left { left: 8px; }
+.hamster-ear-right { right: 8px; }
+.hamster-body {
+  position: absolute;
+  z-index: 1;
+  bottom: 4px;
+  left: 5px;
+  width: 52px;
+  height: 39px;
+  border: 2px solid #99613e;
+  border-radius: 48% 48% 45% 45%;
+  background: #c98b5a;
+}
+.hamster-face {
+  position: absolute;
+  top: 5px;
+  left: 9px;
+  width: 30px;
+  height: 25px;
+  border-radius: 50%;
+  background: #fff0d9;
+}
+.hamster-eye, .hamster-cheek, .hamster-nose { position: absolute; z-index: 1; }
+.hamster-eye { top: 13px; width: 4px; height: 5px; border-radius: 50%; background: #382d2a; }
+.hamster-eye-left { left: 17px; }
+.hamster-eye-right { right: 17px; }
+.hamster-cheek { top: 20px; width: 8px; height: 5px; border-radius: 50%; background: #eda7a0; }
+.hamster-cheek-left { left: 9px; }
+.hamster-cheek-right { right: 9px; }
+.hamster-nose { top: 19px; left: 23px; width: 6px; height: 5px; border-radius: 50%; background: #9e5d59; }
+.hamster-paw {
+  position: absolute;
+  z-index: 2;
+  bottom: 0;
+  width: 13px;
+  height: 8px;
+  border-radius: 50%;
+  background: #f0caa9;
+  animation: hamster-legs .18s ease-in-out infinite alternate;
+}
+.hamster-paw-left { left: 17px; }
+.hamster-paw-right { right: 17px; animation-delay: .09s; }
+@keyframes hamster-legs {
+  from { transform: translateY(-2px) rotate(-12deg); }
+  to { transform: translateY(1px) rotate(12deg); }
 }
 @keyframes hamster-cross-screen {
   from { transform: translateX(0); }
@@ -118,5 +183,5 @@ h1 { margin: 0; font-family: 'Manrope', sans-serif; font-size: clamp(30px, 6vw, 
 }
 @media (prefers-reduced-motion: reduce) {
   .hamster-runner { right: 12px; bottom: 8px; left: auto; animation: none; }
-  .hamster { animation: none; }
+  .hamster, .hamster-paw { animation: none; }
 }
